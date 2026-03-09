@@ -1,0 +1,163 @@
+/* RESET BÁSICO */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --color-fondo: #f8f8f8;
+  --color-primario: #be1622;
+  --color-texto: #000000;
+}
+html, body {
+  height: 100%;
+}
+@font-face {
+  font-family: "Paquito";
+  src: url("fonts/Paquito-Variable.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GeneralSans";
+  src: url("fonts/GeneralSans-Variable.woff2") format("woff2");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; 
+
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.logoyminombre2 {
+  display: flex;
+  flex-direction: column;   /* vertical */
+  align-items: center;      /* centra logo, h1, p dentro del contenedor */
+  text-align: center;       /* centra el texto */
+ 
+}
+
+.logoyminombre2 p {
+  font-family: "GeneralSans", system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: -10px;
+  margin-bottom: 60px;
+}
+
+.logoyminombre2 h1 {
+  font-family: "Paquito", system-ui, sans-serif;
+  font-weight: 700;
+}
+
+.logoportada2 {
+  width: 150px;
+  height: auto;
+ 
+}
+section {
+    font-family: "Paquito", system-ui, sans-serif;
+}
+
+.habilidad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  margin: 0 auto 40px auto;
+  width: 1600px;           /* ancho fijo para todas */
+  height: 500px;   
+  max-width: 1000px;
+  border-radius: 15px;
+ background-color: var(--color-primario);
+ color: #fff;
+opacity: 0.9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.habilidad:hover {
+  /* Elevación sutil */
+  transform: translateY(-10px);
+
+  /* Sombra más elegante y difusa */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+
+  /* Ligero brillo extra */
+  filter: brightness(1.05);
+}
+
+.habilidad h2 {
+  font-family: "Paquito", system-ui, sans-serif;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.habilidad p {
+  font-family: "GeneralSans", system-ui, sans-serif;
+  font-size: 18px;
+  max-width: 700px; 
+}
+.habilidad button {
+    margin-top: 40px;
+    padding: 5px 20px;
+    font-family: "Paquito", system-ui, sans-serif;
+    font-size: 16px;
+    color: var(--color-primario);
+    background-color: #fff3f3; /* azul vibrante */
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+.habilidad button:hover {
+    background-color: #9e131b; /* tono más oscuro al hacer hover */
+    color: #fff;
+}
+.imagenes {
+  display: flex;           /* pone los hijos en fila */
+  gap: 20px;               /* espacio entre imágenes */
+  justify-content: center; /* opcional: centra las imágenes en el contenedor */
+  align-items: center;   
+    /* opcional: alinea verticalmente si tienen diferente altura */
+}
+
+.imagenes img {
+  width: 200px;            /* ancho fijo o relativo */
+  height: auto; 
+   width: 150px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: -20px;           /* mantiene proporción */
+}
