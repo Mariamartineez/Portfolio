@@ -135,3 +135,36 @@ width: 95vw;
 }
 
 }
+
+
+
+.mensaje-clic {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    font-family: "GeneralSans", sans-serif;
+    font-size: 16px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    opacity: 0; /* por defecto oculto en desktop */
+    transition: opacity 0.3s ease;
+}
+
+/* Para desktop, mensaje aparece al pasar el ratón */
+@media (hover: hover) and (pointer: fine) {
+    .imagencentral a:hover .mensaje-clic {
+        opacity: 1;
+    }
+}
+
+/* Para móvil, mostrar siempre el mensaje */
+@media (hover: none) and (pointer: coarse) {
+    .mensaje-clic {
+        opacity: 1;
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+}
