@@ -1,5 +1,9 @@
 <script>
-  if (window.location.pathname.endsWith("portfolio.html")) {
+  // Detecta si es móvil
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+  if (isMobile && window.location.pathname.endsWith("portfolio.html")) {
+    // Solo redirige en móviles
     window.location.href = "index.html";
   }
 </script>
