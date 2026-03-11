@@ -22,7 +22,7 @@
     </div>
     <div class="tarjetas">
 
-        <section class="habilidad diseno">
+        <section class="habilidad diseno fade-element">
             <h2>Diseño Gráfico</h2>
             <p>Diseño gráfico y editorial, ilustración, cartelería, gráficas RRSS</p>
             <div class="imagenes">
@@ -30,10 +30,13 @@
                 <img src="assets/TFG FINAL POR PLIEGOS_page-0001.avif" alt="">
                 <img src="assets/EL CORREO (1).avif" alt="">
             </div>
-            <button>Ver más</button>
+                <a href="diseñografico.html">
+                    <button>Ver más</button>
+                </a>
+
         </section>
 
-        <section class="habilidad branding">
+        <section class="habilidad branding fade-element">
             <h2>Branding</h2>
             <p>Identidad visual, logotipos, estrategia visual</p>
             <div class="imagenes">
@@ -44,7 +47,7 @@
             <button>Ver más</button>
         </section>
 
-        <section class="habilidad web">
+        <section class="habilidad web fade-element">
             <h2>Desarrollo Web</h2>
             <p>HTML, CSS, JavaScript, diseño responsive, WordPress, maquetación con Figma</p>
             <div class="imagenes">
@@ -54,7 +57,7 @@
             <button>Ver más</button>
         </section>
 
-        <section class="habilidad audiovisual">
+        <section class="habilidad audiovisual fade-element">
             <h2>Audiovisual</h2>
             <p>Fotografía, Motion graphics, Edición de vídeo</p>
             <div class="imagenes">
@@ -64,7 +67,7 @@
             </div>
             <button>Ver más</button>
         </section>
-        <div class="contenedorcontacto">
+        <div class="contenedorcontacto fade-element">
             <section class="contacto">
                 <h2>Contacto</h2>
                 <p>Si has llegado hasta aquí, igual deberíamos hablar😉</p>
@@ -87,7 +90,28 @@
 
         </section>
     </div>
+ <script>
+   const animacionentrar = document.querySelectorAll(".fade-element");
 
+const fadeObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target); // deja de observarlo
+      }
+    });
+  },
+  {
+    threshold: 0.3,
+  }
+);
+
+animacionentrar.forEach((element) => {
+  fadeObserver.observe(element);
+});
+ </script>
+    
 </body>
 
 </html>

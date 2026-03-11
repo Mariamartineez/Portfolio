@@ -91,7 +91,6 @@ button {
 
 .logoportada2 {
   width: 150px;
-  height: auto;
 }
 
 /* CONTENEDOR TARJETAS */
@@ -324,4 +323,23 @@ section {
     text-align: center;
     margin-bottom: 15px;
   }
+}
+.fade-element {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* los impares entran desde la izquierda */
+.fade-element:nth-child(odd) {
+  transform: translateX(-300px);
+}
+
+/* los pares entran desde la derecha */
+.fade-element:nth-child(even) {
+  transform: translateX(300px);
+}
+
+.fade-element.show {
+  opacity: 1;
+  transform: translateX(0);
 }
