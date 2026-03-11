@@ -329,17 +329,30 @@ section {
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* los impares entran desde la izquierda */
-.fade-element:nth-child(odd) {
-  transform: translateX(-300px);
+/* DESKTOP */
+@media (min-width: 769px) {
+  .fade-element:nth-child(odd) {
+    transform: translateX(-300px);
+  }
+
+  .fade-element:nth-child(even) {
+    transform: translateX(300px);
+  }
+
+  .fade-element.show {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-/* los pares entran desde la derecha */
-.fade-element:nth-child(even) {
-  transform: translateX(300px);
-}
+/* MÓVIL */
+@media (max-width: 768px) {
+  .fade-element {
+    transform: translateY(60px);
+  }
 
-.fade-element.show {
-  opacity: 1;
-  transform: translateX(0);
+  .fade-element.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
