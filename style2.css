@@ -67,12 +67,12 @@ button {
 /* LOGO Y NOMBRE */
 
 .logoyminombre2 {
+ padding-top: 50px; 
   display: flex;
   flex-direction: column;   
   align-items: center;      
   text-align: center; 
-  padding-top: 50px; 
-  margin-bottom: auto;    
+   
 }
 
 .logoyminombre2 p {
