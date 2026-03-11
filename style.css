@@ -159,12 +159,12 @@ a {
         display: block;
         position: absolute;
         bottom: 90%;
-        left: 65%;
+        left: 70%;
         transform: translateX(-50%);
         background-color: rgba(0,0,0,0.6);
         color: #fff;
         font-family: "GeneralSans", sans-serif;
-        font-size: 10px;
+        font-size: 11px;
         padding: 6px 12px;
         border-radius: 8px;
         text-align: center;
