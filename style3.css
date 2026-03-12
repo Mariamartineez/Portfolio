@@ -12,7 +12,11 @@ html,
 body {
     height: 100%;
 }
-
+:root{
+  --color-fondo: #f8f8f8;
+  --color-primario: #be1622;
+  --color-texto: #000000;
+}
 @font-face {
     font-family: "Paquito";
     src: url("fonts/Paquito-Variable.woff2") format("woff2");
@@ -96,14 +100,14 @@ a {
   gap: 20px;
   height: 400px;                  /* altura base */
   padding: 30px;
-  background-color: #972a2a;
+  background-color: var(--color-primario);
 }
 
 .contenedorimagenes img {
   height: 100%;
   border-radius: 8px;
   object-fit: cover;
-  flex-shrink: 0;                 /* evita que se achiquen en pantallas pequeñas */
+                 /* evita que se achiquen en pantallas pequeñas */
   transition: transform 0.3s;
 }
 
