@@ -88,7 +88,10 @@ button {
   font-weight: 700;
   margin-top: -5px;
 }
-
+.logoportada2:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
 .logoportada2 {
   width: 150px;
 }
