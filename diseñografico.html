@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño gráfico</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+    <!-- logo -->
+    <div class="logoportada">
+        <a href="portfolio.html">
+            <img class="logoportada2" src="assets/logo circular.png" alt="milogo">
+        </a>
+    </div>
+    <!-- cabecera -->
+    <div class="cabecera">
+        <h1>Diseño gráfico</h1>
+    </div>
+    <nav class="indice">
+        <a href="#indicecarteleria">Cartelería</a>
+        <a href="#editorial">Diseño editorial</a>
+        <a href="#indicegraficasrrss">Gráficas RRSS</a>
+    </nav>
+    <!-- carrusel -->
+    <section class="contenedorimagenes">
+        <img src="assets/CARTEL 2.avif" alt="Cartel Coraline" class="imagenproyecto">
+        <img src="assets/TFG FINAL POR PLIEGOS_page-0001.avif" alt="Revista Arte y Publicidad" class="imagenproyecto">
+        <img src="assets/EL CORREO (1).avif" alt="Cartel El Correo" class="imagenproyecto">
+        <img src="assets/Sin título-2.webp" alt="Gráfica rrss" class="imagenproyecto">
+        <img src="assets/italica.webp" alt="Cartel Italica" class="imagenproyecto">
+        <img src="assets/HISTORIAS.webp" alt="Gráfica rrss" class="imagenproyecto">
+        <img src="assets/¡NEWSLETTER!.webp" alt="Portada newsletter" class="imagenproyecto">
+        <img src="assets/Historias instagram 2.webp" alt="Gráfica rrss" class="imagenproyecto">
+        <img src="assets/HISTORIAS (4).webp" alt="Gráfica rrss" class="imagenproyecto">
+        <img src="assets/banner movil cyber monday.webp" alt="Banner móvil" class="imagenproyecto">
+        <img src="assets/portada bellavista.webp" alt="Portada catálogo inmobiliario" class="imagenproyecto">
+        <img src="assets/Banner HOME version escritorio copia.webp" alt="Banner HOME" class="imagenproyecto">
+
+    </section>
+    <!-- secciones -->
+    <!-- seccioncarteleria -->
+    <div class="secciones">
+        <div class="habilidadcarteleria" id="indicecarteleria">
+
+            <h2>Cartelería</h2>
+
+            <div class="gridcarteles">
+
+                <div class="cartel">
+                    <img src="assets/CARTEL 2.avif" alt="Cartel Coraline">
+                    <h3>Los mundos de Coraline</h3>
+                    <p>Idea de cartel para la película dirigida por Henry Selick</p>
+                </div>
+
+                <div class="cartel">
+                    <img src="assets/EL CORREO (1).avif" alt="Cartel El Correo">
+                    <h3>El Correo</h3>
+                    <p>Idea de cartel para la película de Daniel Calparsoro</p>
+                </div>
+
+                <div class="cartel">
+                    <img src="assets/italica.webp" alt="Cartel Italica">
+                    <h3>Itálica</h3>
+                    <p>Idea de cartel realizado para la promoción turística del conjunto arqueológico de Itálica en
+                        Sevilla.</p>
+                </div>
+
+            </div>
+            <!-- seccioneditorial -->
+        </div>
+        <div class="habilidadeditorial" id="editorial">
+
+            <h2>Diseño editorial</h2>
+
+            <div class="gridcarteles">
+                <div class="cartel">
+                    <img src="assets/TFG FINAL POR PLIEGOS_page-0001.avif" alt="Revista Arte y Publicidad">
+<h3>Publicitarte</h3>
+<p>Revista sobre la influencia del arte en la publicidad</p>
+
+
+                </div>
+                <div class="cartel">
+                    <img src="assets/portada bellavista.webp" alt="catalogo inmobiliario">
+                    <h3>Catálogo Niksen Homes</h3>
+                    <p>Catálogo para promoción inmobiliaria</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- seccionrrss -->
+        <div class="habilidadrrss" id="indicegraficasrrss">
+
+            <h2>Gráficas RRSS</h2>
+
+            <div class="gridcarteles">
+
+                <div class="cartel">
+                    <img src="assets/Sin título-2.webp" alt="Cartel Coraline">
+                </div>
+
+                <div class="cartel">
+                    <img src="assets/HISTORIAS.webp" alt="Cartel El Correo">
+
+                </div>
+
+                <div class="cartel">
+                    <img src="assets/HISTORIAS (4).webp" alt="Cartel Italica">
+
+                </div>
+                <div class="cartel">
+                    <img src="assets/Historias instagram 2.webp" alt="Gráfica rrss">
+                </div>
+                <div class="gridcarteles">
+
+                <div class="cartel">
+                        <img src="assets/¡NEWSLETTER!.webp" alt="Portada newsletter">
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cierre de secciones -->
+    </div>
+
+    <!-- VISOR -->
+
+    <div id="visor">
+        <span id="cerrar">&times;</span>
+        <img id="imagenGrande">
+    </div>
+
+    <script>
+
+        const imagenes = document.querySelectorAll(".imagenproyecto");
+        const visor = document.getElementById("visor");
+        const imagenGrande = document.getElementById("imagenGrande");
+        const cerrar = document.getElementById("cerrar");
+
+        imagenes.forEach(img => {
+            img.addEventListener("click", () => {
+                visor.style.display = "flex";
+                imagenGrande.src = img.src;
+            });
+        });
+
+        cerrar.addEventListener("click", () => {
+            visor.style.display = "none";
+        });
+
+    </script>
+</body>
+
+</html>
