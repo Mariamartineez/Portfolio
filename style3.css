@@ -252,7 +252,8 @@ a{
   /* ÍNDICE */
   .indice{
     display: grid;
-  margin: 20px auto 30px auto; /* centrado horizontal */
+    padding: 20px;
+  margin: 0px auto 50px auto; /* centrado horizontal */
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   justify-items: center; /* centra los enlaces dentro de cada celda */
@@ -295,6 +296,12 @@ a{
   /* ÍNDICE */
   .indice{
     gap:10px;
+    display: grid;
+    padding: 20px;
+  margin: 0px auto 50px auto; /* centrado horizontal */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  justify-items: center; /* centra los enlaces dentro de cada celda */
   }
 
   .indice a{
