@@ -91,6 +91,7 @@ button {
 .logoportada2:hover {
     transform: scale(1.05);
     transition: transform 0.3s;
+      opacity: 0.8;
 }
 .logoportada2 {
   width: 150px;
@@ -160,6 +161,8 @@ section {
 .habilidad button:hover {
   background-color: #9e131b; 
   color: #fff;
+  transform: scale(1.2);
+    transition: transform 0.3s;
 }
 
 /* IMÁGENES */
@@ -173,15 +176,11 @@ section {
 }
 
 .imagenes img {
-  width: 150px;
+  width: 200px;
   border-radius: 10px;
   margin-top: -10px;
 }
 
-.imagenes img:hover {
-  transform: scale(1.2);
-  transition: transform 0.3s ease;
-}
 
 /* FORMULARIO */
 
@@ -280,55 +279,141 @@ section {
 }
 
 /* RESPONSIVE */
-
+/* TABLET: hasta 768px */
 @media (max-width: 768px) {
-
-.habilidad {
-  padding: 30px 15px;
-}
-
-.habilidad h2 {
-  font-size: 26px;
-}
-
-.habilidad p {
-  font-size: 14px;
-}
-
-.imagenes img {
-  width: 110px;
-}
-
-.logoyminombre2 h1 {
-  font-size: 28px;
-}
-
-.logoyminombre2 p {
-  font-size: 16px;
-}
-.imagenes img:nth-child(n+3) {
-  display: none;
-}
- .contacto {
-    padding: 20px 15px;
-    min-height: auto; /* que se adapte al contenido */
+  .habilidad {
+    padding: 30px 15px;
+    min-height: auto;
+  }
+  .habilidad h2 {
+    font-size: 26px;
+  }
+  .habilidad p {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+  .habilidad button {
+    font-size: 14px;
+    padding: 5px 15px;
   }
 
+  .imagenes {
+    gap: 15px;
+    
+  }
+  .imagenes img {
+    width: 130px;
+    margin-top: 0;
+  }
+  .imagenes img:nth-child(n+3) {
+    display: none;
+  }
+
+  .logoyminombre2 h1 {
+    font-size: 28px;
+  }
+  .logoyminombre2 p {
+    font-size: 16px;
+  }
+
+  .contacto {
+    padding: 20px 15px;
+    min-height: auto;
+  }
   .contacto h2 {
     font-size: 26px;
     text-align: center;
   }
-
   .contacto p {
     font-size: 14px;
     text-align: center;
     margin-bottom: 15px;
   }
+
+  .formulario-contacto {
+    width: 95%;
+    gap: 12px;
+  }
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .formulario-contacto button {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+
+  .fade-element {
+    transform: translateY(60px);
+  }
+  .fade-element.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
-.fade-element {
-  opacity: 0;
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
+
+/* MÓVIL: hasta 480px */
+@media (max-width: 480px) {
+  .habilidad {
+    padding: 20px 10px;
+    gap: 20px;
+  }
+  .habilidad h2 {
+    font-size: 22px;
+  }
+  .habilidad p {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+  .habilidad button {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
+  .imagenes {
+    gap: 10px;
+  }
+  .imagenes img {
+    width: 100px;
+  }
+  .imagenes img:nth-child(n+3) {
+    display: none;
+  }
+
+  .logoyminombre2 h1 {
+    font-size: 24px;
+  }
+  .logoyminombre2 p {
+    font-size: 14px;
+  }
+
+  .contacto {
+    padding: 15px 10px;
+  }
+  .contacto h2 {
+    font-size: 22px;
+  }
+  .contacto p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .formulario-contacto {
+    width: 100%;
+    gap: 10px;
+  }
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    font-size: 12px;
+    padding: 8px;
+  }
+  .formulario-contacto button {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
+/*animacion*/
 
 /* DESKTOP */
 @media (min-width: 769px) {
@@ -356,4 +441,4 @@ section {
     transform: translateY(0);
     opacity: 1;
   }
-}
+}}
