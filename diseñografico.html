@@ -22,6 +22,7 @@
     <nav class="indice">
         <a href="#indicecarteleria">Cartelería</a>
         <a href="#editorial">Diseño editorial</a>
+        <a href="#digital">Diseño digital</a>
         <a href="#indicegraficasrrss">Gráficas RRSS</a>
     </nav>
     <!-- carrusel -->
@@ -70,7 +71,7 @@
 
             </div>
             <!-- seccioneditorial -->
-        </div>
+        
         <div class="habilidadeditorial" id="editorial">
 
             <h2>Diseño editorial</h2>
@@ -78,20 +79,17 @@
             <div class="gridcarteles">
                 <div class="cartel">
                     <img src="assets/TFG FINAL POR PLIEGOS_page-0001.avif" alt="Revista Arte y Publicidad">
-                    <h3>Publicitarte</h3>
-                    <p>Revista sobre la influencia del arte en la publicidad</p>
+
 
 
                 </div>
                 <div class="cartel">
                     <img src="assets/portada bellavista.webp" alt="catalogo inmobiliario">
-                    <h3>Catálogo Niksen Homes</h3>
-                    <p>Catálogo para promoción inmobiliaria</p>
                 </div>
+
+                <!-- seccionrrss -->
             </div>
         </div>
-
-        <!-- seccionrrss -->
         <div class="habilidadrrss" id="indicegraficasrrss">
 
             <h2>Gráficas RRSS</h2>
@@ -111,46 +109,40 @@
                     <img src="assets/HISTORIAS (4).webp" alt="Cartel Italica">
 
                 </div>
-                <div class="cartel">
-                    <img src="assets/Historias instagram 2.webp" alt="Gráfica rrss">
-                </div>
 
-
-                <div class="cartel">
-                    <img src="assets/¡NEWSLETTER!.webp" alt="Portada newsletter">
-                </div>
             </div>
+
         </div>
-    </div>
 
-    <!-- Cierre de secciones -->
 
-    <!-- VISOR -->
 
-    <div id="visor">
-        <span id="cerrar">&times;</span>
-        <img id="imagenGrande">
-    </div>
 
-    <script>
+        <!-- VISOR -->
 
-        const imagenes = document.querySelectorAll(".imagenproyecto");
-        const visor = document.getElementById("visor");
-        const imagenGrande = document.getElementById("imagenGrande");
-        const cerrar = document.getElementById("cerrar");
+        <div id="visor">
+            <span id="cerrar">&times;</span>
+            <img id="imagenGrande">
+        </div>
 
-        imagenes.forEach(img => {
-            img.addEventListener("click", () => {
-                visor.style.display = "flex";
-                imagenGrande.src = img.src;
+        <script>
+
+            const imagenes = document.querySelectorAll(".imagenproyecto");
+            const visor = document.getElementById("visor");
+            const imagenGrande = document.getElementById("imagenGrande");
+            const cerrar = document.getElementById("cerrar");
+
+            imagenes.forEach(img => {
+                img.addEventListener("click", () => {
+                    visor.style.display = "flex";
+                    imagenGrande.src = img.src;
+                });
             });
-        });
 
-        cerrar.addEventListener("click", () => {
-            visor.style.display = "none";
-        });
+            cerrar.addEventListener("click", () => {
+                visor.style.display = "none";
+            });
 
-    </script>
+        </script>
 </body>
 
 </html>
