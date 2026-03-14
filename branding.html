@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+
+<body>
+    <!-- logo -->
+    <div class="logoportada">
+        <a href="portfolio.html">
+            <img class="logoportada2" src="assets/logo circular.png" alt="milogo">
+        </a>
+    </div>
+    <!-- cabecera -->
+    <div class="cabecera">
+        <h1>Branding</h1>
+    </div>
+   
+    <!-- carrusel -->
+    <section class="contenedorimagenes">
+        <img src="assets/Identidad visual.avif" alt="Branding" class="imagenproyecto">
+        <img src="assets/identidad3.avif" alt="Branding" class="imagenproyecto">
+        <img src="assets/identidad2 png.avif" alt="Branding" class="imagenproyecto">
+        <img src="assets/IDENTIDAD PANAR.avif" alt="Branding" class="imagenproyecto">
+        <img src="assets/IDENTIDAD.webp" alt="Branding" class="imagenproyecto">
+
+    </section>
+    <!-- secciones -->
+    <!-- seccioncarteleria -->
+    <div class="secciones">
+        <div class="habilidadcarteleria" id="indicecarteleria">
+
+            <h2>Identidades visuales</h2>
+
+            <div class="gridcarteles">
+
+                <div class="cartel">
+                    <img src="assets/Identidad visual.avif" alt="Branding">
+                    <h3> Coral Hijas de la Luna</h3>
+                    <p>Identidad visual para la Coral Hijas de la Luna</p>
+                </div>
+
+                <div class="cartel">
+                    <img src="assets/identidad3.avif" alt="Branding">
+                    <h3>GOBITE</h3>
+                    <p>Identidad visual para la app Gobite</p>
+                </div>
+                <div class="cartel">
+                    <img src="assets/IDENTIDAD.webp" alt="Branding">
+                    <h3>Running Laps</h3>
+                    <p>Identidad visual para la app Running Laps</p>
+                </div>
+                <div class="cartel">
+                    <img src="assets/IDENTIDAD PANAR.avif" alt="Branding">
+                    <h3>PANAR</h3>
+                    <p>Identidad visual para la marca PANAR</p>
+                </div>
+                <div class="cartel">
+                    <img src="assets/identidad2 png.avif" alt="Branding">
+                    <h3>El arte reparador que transforma la vida</h3>
+                    <p>Identidad visual para evento de tatuaje reparador</p>
+                </div>
+
+
+            </div>
+
+            <!-- Cierre de secciones -->
+
+            <!-- VISOR -->
+
+            <div id="visor">
+                <span id="cerrar">&times;</span>
+                <img id="imagenGrande">
+            </div>
+
+            <script>
+
+                const imagenes = document.querySelectorAll(".imagenproyecto");
+                const visor = document.getElementById("visor");
+                const imagenGrande = document.getElementById("imagenGrande");
+                const cerrar = document.getElementById("cerrar");
+
+                imagenes.forEach(img => {
+                    img.addEventListener("click", () => {
+                        visor.style.display = "flex";
+                        imagenGrande.src = img.src;
+                    });
+                });
+
+                cerrar.addEventListener("click", () => {
+                    visor.style.display = "none";
+                });
+
+            </script>
+</body>
+
+</html>
