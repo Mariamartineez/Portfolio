@@ -161,51 +161,43 @@ width: 300px;
 }
 /* GRID DE CARTELES */
 .gridcarteles{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  justify-content: center;  /* centra el grid cuando hay pocas columnas */
-  gap: 30px; 
+display:flex;
+flex-direction:column;
+gap:70px;
 }
   
 
 /* PROYECTO */
+
 .cartel{
-  display:flex;
-  flex-direction:column;
-  display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; 
+display:flex;
+align-items:flex-start;
+gap:40px;
+width:100%;
 }
 
 .cartel img{
-  border-radius:10px;
-  margin-bottom:12px;
+width:350px;
+border-radius:10px;
+}
+
+.texto{
+max-width:650px;
 }
 
 .cartel h3{
-  font-family: Paquito, system-ui, sans-serif;
-    font-size: 1.2rem;
-    width: 100%;
-    /* ocupa todo el ancho del contenedor */
-    text-align: center;
-    /* centra el texto horizontalmente */
-    margin-bottom: 12px;
-    /* espacio debajo del h3 */
-  
-  
+font-family:Paquito, system-ui, sans-serif;
+font-size:1.3rem;
+margin-bottom:10px;
+text-align:left;
 }
 
 .cartel p{
-  font-size: 0.9rem;
-    line-height: 1.3;
-    color: #444;
-    width: 100%;
-    /* ocupa todo el ancho de la imagen */
-    text-align: center;
-    /* opcional: centra el texto */
-  }
-
+font-size:0.9rem;
+line-height:1.5;
+color:#444;
+text-align:left;
+}
 
 /* ÍNDICE */
 .indice {
@@ -309,6 +301,23 @@ width: 300px;
     grid-template-columns:repeat(2,1fr);
   }
 }
+@media (max-width: 768px) {
+  .cartel img {
+    width: 300px; /* reducimos un poco la imagen para tablet */
+  }
+
+  .texto {
+    max-width: 500px;
+  }
+
+  .cartel h3 {
+    font-size: 1.2rem;
+  }
+
+  .cartel p {
+    font-size: 0.85rem;
+  }
+}
 
 /* Móvil: hasta 480px */
 @media (max-width: 480px){
@@ -352,5 +361,32 @@ width: 300px;
     top:20px;
     right:25px;
     font-size:35px;
+  }
+}
+/* RESPONSIVE PARA MÓVIL (≤480px) */
+/* Apilamos vertical: imagen arriba, texto abajo */
+@media (max-width: 480px) {
+  .cartel {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .cartel img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .texto {
+    max-width: 95%;
+  }
+
+  .cartel h3 {
+    font-size: 1.1rem;
+  }
+
+  .cartel p {
+    font-size: 0.8rem;
   }
 }
