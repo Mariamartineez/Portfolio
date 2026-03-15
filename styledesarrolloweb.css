@@ -1,0 +1,389 @@
+/* RESET */
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html, body{
+  height:100%;
+}
+
+:root{
+  --color-fondo:#f8f8f8;
+  --color-primario:#be1622;
+  --color-texto:#000;
+}
+
+/* FUENTES */
+@font-face{
+  font-family:"Paquito";
+  src:url("fonts/Paquito-Variable.woff2") format("woff2");
+  font-weight:300 700;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face{
+  font-family:"GeneralSans";
+  src:url("fonts/GeneralSans-Variable.woff2") format("woff2");
+  font-weight:200 700;
+  font-style:normal;
+  font-display:swap;
+}
+
+body{
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  font-family:GeneralSans, system-ui, sans-serif;
+}
+
+/* MEDIA */
+img, video, canvas, svg{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* LOGO */
+.logoportada{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:50px;
+  margin-bottom:40px;
+}
+
+.logoportada:hover{
+  transform:scale(1.05);
+  transition:transform 0.3s;
+  opacity: 0.8;
+}
+
+.logoportada2{
+  height:150px;
+}
+
+/* CABECERA */
+.cabecera{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-bottom:40px;
+}
+
+.cabecera h1{
+  font-family:Paquito, system-ui, sans-serif;
+  font-size:2.5rem;
+}
+
+/* CARRUSEL */
+.contenedorimagenes{
+  position: relative;
+  display:flex;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  gap:20px;
+  height:400px;
+  padding:30px;
+  background:var(--color-primario);
+}
+
+.contenedorimagenes img{
+  height:100%;
+  border-radius:8px;
+  object-fit:cover;
+  transition:transform 0.3s;
+}
+
+.contenedorimagenes img:hover{
+ transform:scale(1.05);
+  transition:transform 0.3s;
+}
+
+/* SECCIÓN CARTELES */
+.habilidadmaquetacion{
+  padding:60px 10%;
+  background:#f5f5f5;
+}
+
+.habilidadmaquetacion h2{
+  font-family:Paquito, system-ui, sans-serif;
+  text-align:center;
+  font-size:2.2rem;
+  margin-bottom:50px;
+}
+
+/* GRID DE CARTELES */
+
+.gridcarteles{
+  display:flex;
+  flex-direction:column;
+  gap:70px;
+}
+
+/* PROYECTO */
+.cartel{
+  display:flex;
+  align-items:flex-start;
+  gap:40px;
+  width:100%;
+}
+
+.cartel img{
+  width:350px;
+  border-radius:10px;
+  margin-bottom: 5px;
+}
+.cartel img:hover{
+ transform:scale(1.05);
+  transition:transform 0.3s;
+}
+.texto{
+  max-width:650px;
+}
+
+.cartel h3{
+  font-family:Paquito, system-ui, sans-serif;
+  font-size:1.3rem;
+  margin-bottom:10px;
+  text-align:left;
+}
+
+.cartel p{
+  font-size:0.9rem;
+  line-height:1.5;
+  color:#444;
+  text-align:left;
+}
+
+/* SECCIÓN PANAR */
+.cartel-maquetacion{
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.cartel-maquetacion .texto{
+  margin-top: 20px;
+}
+
+.imagenes-maquetacion{
+   display: flex;
+  flex-wrap: wrap; /* permite que las imágenes pasen a otra línea si no caben */
+  gap: 20px;
+  justify-content: center; /* opcional, centra las imágenes */
+}
+
+.imagenes-maquetacion img{
+  width: 250px;
+  height: auto; /* mantiene proporción real */
+  border-radius: 10px;
+  object-fit: contain;
+  gap: 10px;
+}
+.imagenes-maquetacion img:hover{
+  transform:scale(1.05);
+ transition:transform 0.3s;
+}
+
+/* ÍNDICE */
+/* ÍNDICE */
+.indice {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0 50px 0;
+}
+
+.indice a {
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 2px solid black;
+  border-radius: 30px;
+  font-weight: bold;
+  color: black;
+  transition: all 0.3s ease;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 120px;
+}
+
+.indice a:hover {
+  background: black;
+  color: white;
+  transform:scale(1.15);
+  transition:transform 0.3s;
+}
+/* VISOR */
+#visor{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:rgba(0,0,0,0.8);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+  padding:20px;
+}
+
+#visor img{
+  max-width:90%;
+  max-height:85%;
+  border-radius:10px;
+}
+
+#cerrar{
+  position:absolute;
+  top:30px;
+  right:40px;
+  font-size:40px;
+  color:white;
+  cursor:pointer;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet: hasta 768px */
+@media (max-width: 768px) {
+  .cabecera h1 {
+    font-size: 1.8rem;
+  }
+
+  .habilidadmaquetacion h2 {
+    font-size: 2rem;
+  }
+
+  .contenedorimagenes {
+    height: 300px;
+    padding: 20px;
+  }
+
+  .indice {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-items: center;
+    margin: 0 auto 50px auto;
+    padding: 20px;
+  }
+
+  .indice a {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 15px;
+    border-radius: 25px;
+  }
+
+  .cartel {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .cartel img {
+    width: 300px;
+  }
+
+  .cartel h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .cartel p {
+    font-size: 0.85rem;
+   text-align: justify;
+  }
+
+  .imagenes-maquetacion {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagenes-maquetacion img {
+    width: 100%;
+    max-width: 300px; /* opcional para no que sean muy grandes */
+  }
+  
+  .gridcartelpanar{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+
+/* Móvil: hasta 480px */
+@media (max-width: 480px) {
+  .cabecera h1 {
+    font-size: 1.7rem;
+  }
+
+  .habilidadmaquetacion h2 {
+    font-size: 1.5rem;
+  }
+
+  .contenedorimagenes {
+    height: 200px;
+    padding: 20px;
+  }
+
+  .contenedorimagenes img {
+    min-width: 100px;
+  }
+
+  .indice {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .indice a {
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 20px;
+  }
+
+  .cartel img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .cartel h3 {
+    font-size: 1.1rem;
+  }
+
+  .cartel p {
+    font-size: 0.8rem;
+    text-align: justify;
+  }
+
+    .imagenes-maquetacion {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* espacio entre imágenes */
+  }
+
+  .imagenes-maquetacion img {
+    width: 100%;
+    max-width: 250px; 
+    margin-top: 20px;
+  }
+
+  #cerrar {
+    top: 20px;
+    right: 25px;
+    font-size: 35px;
+  }
+}

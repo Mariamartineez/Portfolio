@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paginaprincipal</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="styleportfolio.css">
 </head>
 
 <body>
@@ -92,27 +92,27 @@
             </section>
         </div>
     </div>
-    <script>
-        const animacionentrar = document.querySelectorAll(".fade-element");
+   <script>
+   const animacionentrar = document.querySelectorAll(".fade-element");
 
-        const fadeObserver = new IntersectionObserver(
-            (entries, observer) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("show");
-                        observer.unobserve(entry.target); // deja de observarlo
-                    }
-                });
-            },
-            {
-                threshold: 0.3,
-            }
-        );
+const fadeObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target); // deja de observarlo
+      }
+    });
+  },
+  {
+    threshold: 0.3,
+  }
+);
 
-        animacionentrar.forEach((element) => {
-            fadeObserver.observe(element);
-        });
-    </script>
+animacionentrar.forEach((element) => {
+  fadeObserver.observe(element);
+});
+ </script>
 
 </body>
 
