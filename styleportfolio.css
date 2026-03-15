@@ -80,7 +80,7 @@ button {
   font-size: 20px;
   font-weight: 400;
   margin-top: -10px;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 
 .logoyminombre2 h1 {
@@ -101,7 +101,7 @@ button {
 
 .tarjetas {
   padding: 0 20px;
-  overflow-x: hidden;
+  margin-top: 60px;
 }
 
 /* TARJETAS */
