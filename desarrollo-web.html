@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+
+<body>
+
+    <!-- logo -->
+    <div class="logoportada">
+        <a href="portfolio.html">
+            <img class="logoportada2" src="assets/logo circular.png" alt="milogo">
+        </a>
+    </div>
+
+    <!-- cabecera -->
+    <div class="cabecera">
+        <h1>Desarrollo Web</h1>
+    </div>
+
+    <nav class="indice">
+        <div class="boton1"><a href="#indicemaquetacion">Maquetación</a></div>
+        <div class="boton3"><a href="#wordpress">Web con Wordpress</a></div>
+        <div class="boton2"><a href="#codigo">Web con código</a></div>
+    </nav>
+
+    <!-- carrusel -->
+    <section class="contenedorimagenes">
+        <img src="assets/Desktop - 1 1.avif" alt="Desarrollo Web" class="imagenproyecto">
+        <img src="assets/Desktop - 1 2.avif" alt="Desarrollo Web" class="imagenproyecto">
+        <img src="assets/Desktop - 2 copia.webp" alt="Desarrollo Web" class="imagenproyecto">
+        <img src="assets/merkamueble 1.avif" alt="Desarrollo Web" class="imagenproyecto">
+
+
+
+    </section>
+
+
+    <!-- SECCIÓN IDENTIDADES -->
+    <div class="habilidadmaquetacion">
+
+        <h2>Maquetación </h2>
+
+        <div class="gridcarteles">
+
+            <div class="cartel cartel-maquetacion" id="indicemaquetacion">
+                <div class="texto">
+                    <h3>Web PANAR</h3>
+                    <p></p>
+                </div>
+                <div class="imagenes-maquetacion">
+                    <img src="assets/Desktop - 1 1.avif" alt="Desarrollo Web">
+                    <img src="assets/Desktop - 2 copia.webp" alt="Desarrollo Web">
+                    <img src="assets/Desktop - 1 2.avif" alt="Desarrollo Web">
+
+                </div>
+
+
+            </div>
+
+            <div class="cartel">
+                <img src="assets/merkamueble 1.avif" alt="Desarrollo Web">
+
+                <div class="texto">
+                    <h3>Rediseño web Merkamueble</h3>
+                    <p>
+                        Este proyecto consiste en el rediseño conceptual de la web de Merkamueble, además del rediseño
+                        del logo de la marca, con el objetivo de
+                        mejorar la experiencia de usuario y modernizar su identidad digital. <br><br>
+                        El enfoque principal fue simplificar la navegación, organizar mejor la información y facilitar
+                        el acceso a las categorías
+                        de producto. <br><br>
+
+                        Se trabajó en una estructura más clara y visual, priorizando la jerarquía de contenidos y la
+                        legibilidad. El uso de espacios amplios, una disposición más ordenada de los productos y
+                        elementos gráficos más actuales permiten una navegación más intuitiva y agradable. <br><br>
+
+                        El rediseño mantiene la esencia de la marca, pero introduce un estilo visual más limpio y
+                        contemporáneo, adaptado a los hábitos de navegación actuales y optimizado para una experiencia
+                        más fluida tanto en escritorio como en dispositivos móviles.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- VISOR -->
+    <div id="visor">
+        <span id="cerrar">&times;</span>
+        <img id="imagenGrande">
+    </div>
+
+
+    <script>
+
+        const imagenes = document.querySelectorAll(".imagenproyecto");
+        const visor = document.getElementById("visor");
+        const imagenGrande = document.getElementById("imagenGrande");
+        const cerrar = document.getElementById("cerrar");
+
+        imagenes.forEach(img => {
+            img.addEventListener("click", () => {
+                visor.style.display = "flex";
+                imagenGrande.src = img.src;
+            });
+        });
+
+        cerrar.addEventListener("click", () => {
+            visor.style.display = "none";
+        });
+
+    </script>
+
+</body>
+
+</html>
