@@ -86,6 +86,7 @@ a{
 
 /* CARRUSEL */
 .contenedorimagenes{
+  position: relative;
   display:flex;
   overflow-x:auto;
   scroll-behavior:smooth;
@@ -93,6 +94,7 @@ a{
   height:400px;
   padding:30px;
   background:var(--color-primario);
+  
 }
 
 .contenedorimagenes img{
@@ -338,6 +340,14 @@ text-align:left;
     min-width:100px;
   }
 
+.lupa {
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  font-size: 13px;
+}
+
+}
   /* ÍNDICE */
   .indice{
     grid-template-columns: 1fr;
@@ -363,7 +373,7 @@ text-align:left;
     right:25px;
     font-size:35px;
   }
-}
+
 /* RESPONSIVE PARA MÓVIL (≤480px) */
 /* Apilamos vertical: imagen arriba, texto abajo */
 @media (max-width: 480px) {
@@ -392,4 +402,6 @@ text-align:left;
   }
 }
 .habilidadcarteleria h2 {
-    font-size:1.5rem;}
+    font-size:1.5rem;
+  }
+  
