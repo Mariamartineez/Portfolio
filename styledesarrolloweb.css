@@ -319,9 +319,6 @@ a{
     max-width: 300px; /* opcional para no que sean muy grandes */
   }
   
-  .gridcartelpanar{
-    grid-template-columns:repeat(2,1fr);
-  }
 }
 
 
@@ -381,7 +378,7 @@ a{
     .imagenes-maquetacion {
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* espacio entre imágenes */
+    gap: 15px; 
   }
 
   .imagenes-maquetacion img {
