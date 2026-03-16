@@ -308,6 +308,15 @@ a{
     font-size: 0.85rem;
    text-align: justify;
   }
+  .cartel img { 
+    order: 2; 
+  }
+
+  .cartel .texto {
+     order: 1;
+     margin-bottom: 5px;
+  }
+
 
   .imagenes-maquetacion {
     flex-direction: column;
