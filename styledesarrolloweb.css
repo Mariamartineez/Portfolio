@@ -147,7 +147,7 @@ a{
   transition:transform 0.3s;
 }
 .texto{
-  max-width:650px;
+  max-width:100%;
 }
 
 .cartel h3{
@@ -368,6 +368,15 @@ a{
     font-size: 0.8rem;
     text-align: justify;
   }
+  .cartel img { 
+    order: 2; 
+  }
+
+  .cartel .texto {
+     order: 1;
+     margin-bottom: 5px;
+  }
+
 
     .imagenes-maquetacion {
     flex-direction: column;
