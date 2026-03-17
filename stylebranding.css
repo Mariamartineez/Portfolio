@@ -144,31 +144,13 @@ a{
   font-size:2.2rem;
   margin-bottom:50px;
 }
-.habilidaddigital {
-  padding: 60px 10%;
-  background: #f5f5f5;
-  align-items: center;
-}
 
-.habilidaddigital h2 {
-  font-family: Paquito, system-ui, sans-serif;
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 50px;
-}
-.habilidaddigital img{
-width: 300px;
-  /* ancho fijo */
-  height: auto;
-
-}
 /* GRID DE CARTELES */
 .gridcarteles{
 display:flex;
 flex-direction:column;
 gap:70px;
 }
-  
 
 /* PROYECTO */
 
@@ -348,18 +330,6 @@ text-align:left;
 }
 
 }
-  /* ÍNDICE */
-  .indice{
-    grid-template-columns: 1fr;
-      /* 1 botón por fila */
-      gap: 10px;
-  }
-
-  .indice a{
-    padding:6px 10px;
-    font-size:14px;
-    border-radius:20px;
-  }
 
   /* GRID DE CARTELES */
   .gridcarteles{
