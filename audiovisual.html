@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiovisual</title>
+    <link rel="stylesheet" href="styleaudiovisual.css">
+</head>
+
+<body>
+    <!-- logo -->
+    <div class="logoportada">
+        <a href="portfolio.html">
+            <img class="logoportada2" src="assets/logo circular.png" alt="milogo">
+        </a>
+    </div>
+    <!-- cabecera -->
+    <div class="cabecera">
+        <h1>Audiovisual</h1>
+    </div>
+    <nav class="indice">
+        <div class="boton1"><a href="#indicefotografia">Fotografía</a></div>
+        <div class="boton2"><a href="#indicemotion">Motion Graphics</a></div>
+        <div class="boton3"><a href="#indiceedicionvideo">Edición de Video</a></div>
+    </nav>
+    <!-- carrusel -->
+    <section class="contenedorimagenes">
+        <img src="assets/DSC03032.avif" alt="Fotografía" class="imagenproyecto">
+        <img src="assets/DSC03248.avif" alt="Fotografía" class="imagenproyecto">
+        <img src="assets/SRZ02415.webp" alt="Fotografía " class="imagenproyecto">
+        <img src="assets/DSC02759.webp" alt="Fotografía" class="imagenproyecto">
+        <img src="assets/SRZ08258.webp" alt="Fotografía " class="imagenproyecto">
+        <img src="assets/DSC03342.avif" alt="Fotografía" class="imagenproyecto">
+        <img src="assets/DSC02750.webp" alt="Fotografía" class="imagenproyecto">
+        <img src="assets/SRZ02774.webp" alt="Fotografía" class="imagenproyecto">
+        <img src="assets/DSC02816.webp" alt="Fotografía" class="imagenproyecto">
+        <img src="assets/SRZ08117.webp" alt="Fotografía" class="imagenproyecto">
+        <img src="assets/DSC03160.webp" alt="Fotografía" class="imagenproyecto">
+        <img src="assets/DSC03393.webp" alt="Fotografía" class="imagenproyecto">
+        <img src="assets/SRZ08420.webp" alt="Fotografía " class="imagenproyecto">
+        <img src="assets/DSC03437.webp" alt="Fotografía" class="imagenproyecto">
+        <img src="assets/DSC03644.webp" alt="Fotografía" class="imagenproyecto">
+        <img src="assets/SRZ08439.webp" alt="Fotografía " class="imagenproyecto">
+        <img src="assets/DSC03685.webp" alt="Fotografía" class="imagenproyecto">
+        <img src="assets/SRZ02079.webp" alt="Fotografía " class="imagenproyecto">
+        <img src="assets/SRZ08434.webp" alt="Fotografía" class="imagenproyecto">
+
+    </section>
+    <!-- secciones -->
+    <!-- seccionfotografia -->
+    <div class="habilidadrrss" id="indicefotografia">
+
+        <h2>Fotografía</h2>
+
+        <div class="gridcarteles">
+
+            <div class="cartel">
+                <img src="assets/DSC03032.avif" alt="Fotografía">
+            </div>
+
+            <div class="cartel">
+                 <img src="assets/DSC03248.avif" alt="Fotografía">
+
+            </div>
+
+            <div class="cartel">
+               <img src="assets/SRZ02415.webp" alt="Fotografía ">
+
+            </div>
+            <div class="cartel">
+                <img src="assets/DSC02759.webp" alt="Fotografía">
+            </div>
+
+
+            <div class="cartel">
+                <img src="assets/DSC03342.avif" alt="Fotografía">
+            </div>
+        </div>
+    </div>
+     <!-- seccionmotion graphics-->
+      <div class="habilidadmotion" id="indicemotion">
+
+      <h2>Motion Graphics</h2>
+
+        <div class="gridcarteles">
+
+            <div class="cartel">
+                <video  controls autoplay muted loop src="assets/proyecto logo.mp4"></video>
+                </div>
+        </div>
+    </div>
+  <!-- seccionedición video-->
+      <div class="habilidadvideo" id="indiceedicionvideo">
+
+      <h2>Edición de Video</h2>
+
+        <div class="gridcarteles">
+
+            <div class="cartelvideo">
+                <a href="https://www.youtube.com/watch?v=58AZPDGpAt8&t=155s"><img src="assets/opcion1.webp" alt="videoyoutube"></a>
+                </div>
+        </div>
+    </div>
+    <!-- VISOR -->
+
+    <div id="visor">
+        <span id="cerrar">&times;</span>
+        <img id="imagenGrande">
+    </div>
+
+    <script>
+
+        const imagenes = document.querySelectorAll(".imagenproyecto");
+        const visor = document.getElementById("visor");
+        const imagenGrande = document.getElementById("imagenGrande");
+        const cerrar = document.getElementById("cerrar");
+
+        imagenes.forEach(img => {
+            img.addEventListener("click", () => {
+                visor.style.display = "flex";
+                imagenGrande.src = img.src;
+            });
+        });
+
+        cerrar.addEventListener("click", () => {
+            visor.style.display = "none";
+        });
+
+    </script>
+</body>
+
+</html>
