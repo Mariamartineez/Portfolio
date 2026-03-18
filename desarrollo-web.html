@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
     <!-- logo -->
     <div class="logoportada">
         <a href="portfolio.html">
-            <img class="logoportada2" src="assets/logo circular.png" alt="milogo">
+            <img class="logoportada2" src="assets/logo circular.webp" alt="milogo">
         </a>
     </div>
 
@@ -25,7 +25,7 @@
     <nav class="indice">
         <div class="boton1"><a href="#indicemaquetacion">Maquetación</a></div>
         <div class="boton3"><a href="#wordpress">Web con Wordpress</a></div>
-        <div class="boton2"><a href="#codigo">Web con código</a></div>
+        <div class="boton2"><a href="#indicecodigo">Web con código</a></div>
     </nav>
 
     <!-- carrusel -->
@@ -34,66 +34,79 @@
         <img src="assets/Desktop - 1 2.avif" alt="Desarrollo Web" class="imagenproyecto">
         <img src="assets/Desktop - 2 copia.webp" alt="Desarrollo Web" class="imagenproyecto">
         <img src="assets/merkamueble 1.avif" alt="Desarrollo Web" class="imagenproyecto">
-
-
-
     </section>
 
-
-    <!-- SECCIÓN IDENTIDADES -->
+    <!-- SECCIÓN MAQUETACIÓN -->
     <div class="habilidadmaquetacion">
 
-        <h2>Maquetación </h2>
+        <h2>Maquetación Web</h2>
 
         <div class="gridcarteles">
 
+            <!-- PANAR: título + imágenes en fila -->
             <div class="cartel cartel-maquetacion" id="indicemaquetacion">
                 <div class="texto">
                     <h3>Web PANAR</h3>
-                    <p></p>
                 </div>
                 <div class="imagenes-maquetacion">
                     <img src="assets/Desktop - 1 1.avif" alt="Desarrollo Web" class="imagenproyecto">
                     <img src="assets/Desktop - 2 copia.webp" alt="Desarrollo Web" class="imagenproyecto">
                     <img src="assets/Desktop - 1 2.avif" alt="Desarrollo Web" class="imagenproyecto">
-
                 </div>
-
-
             </div>
 
-            <div class="cartel">
+            <!-- MERKAMUEBLE: título + imagen + párrafo -->
+            <div class="cartel cartel-centrado">
+                <h3>Rediseño web Merkamueble</h3>
                 <img src="assets/merkamueble 1.avif" alt="Desarrollo Web" class="imagenproyecto">
+                <p>
+                    El proyecto consiste en el rediseño conceptual de la web y el logo de Merkamueble para
+                    modernizar su identidad digital y mejorar la experiencia de usuario.
+                    Se propone una navegación más clara e intuitiva, con mejor organización de la información, mayor
+                    jerarquía visual y un diseño limpio adaptado a escritorio y dispositivos móviles.
+                </p>
+            </div>
 
+        </div>
+    </div>
+
+    <!-- SECCIÓN CÓDIGO -->
+    <div class="habilidadcodigo" id="indicecodigo">
+        <h2>Web con código</h2>
+
+        <div class="gridcarteles">
+
+            <div class="cartelcodigo">
                 <div class="texto">
-                    <h3>Rediseño web Merkamueble</h3>
+                    <h3>Portfolio Personal</h3>
                     <p>
-                        El proyecto consiste en el rediseño conceptual de la web y el logo de Merkamueble para
-                        modernizar su identidad digital y mejorar la experiencia de usuario.
-
-                        Se propone una navegación más clara e intuitiva, con mejor organización de la información, mayor
-                        jerarquía visual y un diseño limpio adaptado a escritorio y dispositivos móviles.
+                        Este portfolio web no está hecho con ninguna plantilla ni constructor de páginas: está escrito línea
+                        a línea en HTML, CSS y JavaScript. Cada sección, cada animación y cada detalle de espaciado
+                        están pensados y codificados a mano, lo que me ha permitido aplicar directamente los mismos
+                        principios de diseño que trabajo en mis proyectos — coherencia visual, jerarquía clara y
+                        atención al detalle — pero esta vez desde el código.
                     </p>
                 </div>
             </div>
+
         </div>
     </div>
-<!-- SECCIÓN CÓDIGO -->
-    <div class="habilidadcodigo"> </div>
 
     <!-- VISOR -->
     <div id="visor">
         <span id="cerrar">&times;</span>
-        <img id="imagenGrande">
+        <img id="imagenGrande" alt="Imagen ampliada">
     </div>
 
+    <!-- BOTÓN -->
+    <button id="volverarriba">↑</button>
 
     <script>
-
         const imagenes = document.querySelectorAll(".imagenproyecto");
         const visor = document.getElementById("visor");
         const imagenGrande = document.getElementById("imagenGrande");
         const cerrar = document.getElementById("cerrar");
+        const btn = document.getElementById("volverarriba");
 
         imagenes.forEach(img => {
             img.addEventListener("click", () => {
@@ -106,8 +119,14 @@
             visor.style.display = "none";
         });
 
+        window.addEventListener('scroll', function () {
+            btn.style.opacity = window.scrollY > 300 ? '1' : '0';
+        });
+
+        btn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
 
 </body>
-
 </html>

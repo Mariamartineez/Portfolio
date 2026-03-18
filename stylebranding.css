@@ -243,31 +243,72 @@ text-align:left;
   color:white;
   cursor:pointer;
 }
+/* BOTÓN VOLVER ARRIBA*/
+#volverarriba {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+}
 
 /* MEDIA QUERIES */
+/* TABLET */
+@media (max-width:768px){
 
-/* Tablet: hasta 768px */
-@media (max-width: 768px){
-  /* CARRUSEL */
   .cabecera h1{
-    font-size:1.8rem;
-  }
-  .secciones h2{
     font-size:2rem;
   }
+
   .contenedorimagenes{
     height:300px;
     padding:20px;
+    gap:12px;
   }
 
-  /* ÍNDICE */
+  .habilidadcarteleria{
+    padding:40px 5%;
+  }
+
+  .habilidadcarteleria h2{
+    font-size:1.8rem;
+    margin-bottom:30px;
+  }
+
+  /* imagen arriba, texto abajo desde tablet */
+  .cartel{
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+  }
+
+  .cartel img{
+    width:100%;
+    max-width:500px;
+    border-radius:8px;
+  }
+
+  .texto{
+    max-width:100%;
+  }
+
+  .cartel h3{
+    text-align:center;
+  }
+
   .indice{
-    display: grid;
-    padding: 20px;
-  margin: 0px auto 50px auto; /* centrado horizontal */
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  justify-items: center; /* centra los enlaces dentro de cada celda */
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:15px;
+    justify-items:center;
+    margin:0 auto 50px auto;
+    padding:20px;
   }
 
   .indice a{
@@ -276,102 +317,99 @@ text-align:left;
     font-size:15px;
     border-radius:25px;
   }
-
-  .cartel h1{
+}
+ 
+/* MÓVIL */
+@media (max-width:480px){
+ 
+  .logoportada2{
+    height:100px;
+  }
+ 
+  .logoportada{
+    margin-top:30px;
+    margin-bottom:25px;
+  }
+ 
+  .cabecera h1{
     font-size:1.5rem;
   }
-  
-  /* GRID DE CARTELES */
-  .gridcarteles{
-    grid-template-columns:repeat(2,1fr);
+ 
+  .cabecera{
+    margin-bottom:25px;
   }
-}
-@media (max-width: 768px) {
-  .cartel img {
-    width: 300px; /* reducimos un poco la imagen para tablet */
-  }
-
-  .texto {
-    max-width: 500px;
-  }
-
-  .cartel h3 {
-    font-size: 1.2rem;
-  }
-
-  .cartel p {
-    font-size: 0.85rem;
-  }
-}
-
-/* Móvil: hasta 480px */
-@media (max-width: 480px){
-    .cabecera h1{
-    font-size:1.7rem;
-  }
-  .secciones h2{
-    font-size:1.5rem;
-  }
-  /* CARRUSEL */
+ 
   .contenedorimagenes{
     height:200px;
-    padding:20px;
+    padding:15px;
+    gap:12px;
   }
-
+ 
   .contenedorimagenes img{
     min-width:100px;
   }
-
-.lupa {
-  position: absolute;
-  top: 21px;
-  left: 21px;
-  font-size: 13px;
-}
-
-}
-
-  /* GRID DE CARTELES */
-  .gridcarteles{
-    grid-template-columns:1fr;
-    gap:70px;
+ 
+  .habilidadcarteleria{
+    padding:30px 5%;
   }
-
-  /* VISOR */
+ 
+  .habilidadcarteleria h2{
+    font-size:1.6rem;
+    margin-bottom:30px;
+  }
+ 
+  .gridcarteles{
+    gap:40px;
+  }
+ 
+  /* imagen arriba, texto abajo en móvil */
+  .cartel{
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+  }
+ 
+  .cartel img{
+    width:100%;
+    border-radius:8px;
+  }
+ 
+  .texto{
+    max-width:100%;
+  }
+ 
+  .cartel h3{
+    font-size:1.1rem;
+    text-align:center;
+  }
+ 
+  .cartel p{
+    font-size:0.85rem;
+    text-align:left;
+  }
+ 
+  .indice{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+ 
+  .indice a{
+    padding:6px 10px;
+    font-size:14px;
+    border-radius:20px;
+  }
+ 
   #cerrar{
     top:20px;
     right:25px;
     font-size:35px;
   }
-
-/* RESPONSIVE PARA MÓVIL (≤480px) */
-/* Apilamos vertical: imagen arriba, texto abajo */
-@media (max-width: 480px) {
-  .cartel {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
-  }
-
-  .cartel img {
-    width: 100%;
-    max-width: 250px;
-  }
-
-  .texto {
-    max-width: 95%;
-  }
-
-  .cartel h3 {
-    font-size: 1.1rem;
-  }
-
-  .cartel p {
-    font-size: 0.8rem;
+ 
+  #volverarriba{
+    bottom:0.8rem;
+    right:0.8rem;
+    padding:7px 11px;
+    font-size:14px;
   }
 }
-.habilidadcarteleria h2 {
-    font-size:1.5rem;
-  }
-  
+

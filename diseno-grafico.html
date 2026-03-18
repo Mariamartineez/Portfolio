@@ -12,7 +12,7 @@
     <!-- logo -->
     <div class="logoportada">
         <a href="portfolio.html">
-            <img class="logoportada2" src="assets/logo circular.png" alt="milogo">
+            <img class="logoportada2" src="assets/logo circular.webp" alt="milogo">
         </a>
     </div>
     <!-- cabecera -->
@@ -81,8 +81,8 @@
                     <h3>Publicitarte</h3>
                     <p>Revista sobre la influencia del arte en la publicidad</p>
                     <a href="assets/TFG FINAL POR PLIEGOS.pdf" download class="boton-descarga">
-  Descargar proyecto
-</a>
+                        Descargar proyecto
+                    </a>
 
 
                 </div>
@@ -91,8 +91,8 @@
                     <h3>Catálogo Niksen Homes</h3>
                     <p>Catálogo para promoción inmobiliaria</p>
                     <a href="assets/promBellavista - DEFINITIVO.pdf" download class="boton-descarga">
-  Descargar proyecto
-</a>
+                        Descargar proyecto
+                    </a>
                 </div>
             </div>
         </div>
@@ -137,26 +137,40 @@
         <span id="cerrar">&times;</span>
         <img id="imagenGrande">
     </div>
+   <!-- BOTON -->
+<button id="volverarriba">↑</button>
 
     <script>
+    const imagenes = document.querySelectorAll(".imagenproyecto");
+    const visor = document.getElementById("visor");
+    const imagenGrande = document.getElementById("imagenGrande");
+    const cerrar = document.getElementById("cerrar");
+    const btn = document.getElementById("volverarriba");
 
-        const imagenes = document.querySelectorAll(".imagenproyecto");
-        const visor = document.getElementById("visor");
-        const imagenGrande = document.getElementById("imagenGrande");
-        const cerrar = document.getElementById("cerrar");
-
-        imagenes.forEach(img => {
-            img.addEventListener("click", () => {
-                visor.style.display = "flex";
-                imagenGrande.src = img.src;
-            });
+    imagenes.forEach(img => {
+        img.addEventListener("click", () => {
+            visor.style.display = "flex";
+            imagenGrande.src = img.src;
         });
+    });
 
-        cerrar.addEventListener("click", () => {
-            visor.style.display = "none";
-        });
+    cerrar.addEventListener("click", () => {
+        visor.style.display = "none";
+    });
 
-    </script>
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+            btn.style.opacity = '1';
+        } else {
+            btn.style.opacity = '0';
+        }
+    });
+
+    btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
 </body>
 
 </html>

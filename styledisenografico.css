@@ -287,6 +287,21 @@ width: 300px;
   cursor:pointer;
 }
 
+/* BOTÓN VOLVER ARRIBA*/
+#volverarriba {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+}
+
 /* MEDIA QUERIES */
 
 /* Tablet: hasta 768px */
@@ -372,5 +387,12 @@ width: 300px;
     top:20px;
     right:25px;
     font-size:35px;
+  }
+  /*boton para volver arriba*/
+  #volverarriba {
+    bottom: 0.8rem;
+    right: 0.8rem;
+    padding: 7px 11px;
+    font-size: 14px;
   }
 }
